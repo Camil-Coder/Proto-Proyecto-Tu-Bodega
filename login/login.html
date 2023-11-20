@@ -1,0 +1,81 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TuBodega</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./login.css">
+    <script src="./login.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="head-container"><img src="./Logo-TuBodega.png" alt="logo"> Inicio de sesión</div>
+        <!--              formulario de ingreso                    -->
+        <form action="#" method="" class="login" id="formularioIngreso">
+        <!--              seleccion de tipo de usuaio administrador asesor domiciliario         -->
+            <div class="block block-one">
+                <label for="profile" class="texto">Perfil:</label>
+                <div class="box">
+                    <div class="ico ico-perfil"></div>
+                    <select id="profile" name="profile" class="input" >
+                        <option value="Administrador">Administrador</option>
+                        <option value="Asesor de Ventas">Asesor de Ventas</option>
+                        <option value="Encargado_Inventario">Encargado Inventario</option>
+                    </select>
+                </div>
+            </div>
+        <!--              campo de texto para ingresar el correo electronico                    -->
+            <div class="block block-two">
+                <label for="email" class="texto">Correo: </label>
+                <div class="box">
+                    <div class="ico ico-correo"></div>
+                    <input type="text" name="email" id="email" class="input email" placeholder=" pepito@ejemplo.com">
+                </div>
+            </div>
+        <!--              campo de texto para ingresar la contraseña                           -->
+            <div class="block block-three">
+                <label for="password" class="texto">Contraseña: </label>
+                <div class="box">
+                    <div class="ico ico-pasword"></div>
+                    <input type="password" name="password" id="password" class="input" placeholder=" ********">
+                </div>
+            </div>
+        <!--              texto ancla para recuperar la contraseña                             -->
+            <div class="block block-four">
+                <a href="#" id="showModal">¿Olvidaste la contraseña?.</a>
+            </div>
+        <!--              boton de ingreso al aplicativo                                       -->
+            <div class="block block-five" id="btn">
+                <button class="btn" type="submit">Ingresar</button>
+            </div>
+        </form>
+        <!--creacion del  Modal, el Modal es una pequeña ventana que se abrira cuando alguien de click en ¿Olvidaste la contraseña?-->
+        <div id="myModal" class="modal">
+            <div class="content-modal">
+                <div class="headerModal">
+                    <div class="headerModalTitle">¿Recuperar contraseña?</div>
+                    <div class="close">&times;</div>
+                </div>
+                <div class="recoveryPasword">
+                    <dvi class="mensaje">
+                        <p>Por favor, sigue las instrucciones que te enviaremos por email para recuperar tu contraseña.</p></dvi>
+                    <form action="#" method="" id="formularioIngreso">
+                        <div class="box">
+                            <label for="email" >Ingrese su Correo: </label>
+                            <div class="ico ico-correo"></div><br> <br><br>
+                            <input type="text" name="email" id="email" class="input email" placeholder=" pepito@ejemplo.com">
+                        </div>
+                        <div class="enviarModal">
+                            <button class="btn" type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
+

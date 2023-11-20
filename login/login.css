@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;400;500&display=swap');
+/* reseteo del paddin y margin de la pagina esto siempre se hace y el box-sizing se coloca para quitar el scroll alos lados*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/******************************************************************************************************************************/
+/*tamaño de la letra sera igual 10 pixeles utilizar solo medidas 'rem' ejemplo 1rem = 10px*/
+html{
+    font-size: 62.5%;  
+    font-family: 'Playpen Sans', cursive;
+}
+/******************************************************************************************************************************/
+/*  creacion de variables      */
+:root{
+    --colorFondo:#fff;
+    --coloPrinci:rgba(107, 112, 112, 0.5);
+    --colosecu:rgba(107, 112, 112, 0.5);
+    --sombra:# ;
+    --ancla:rgb(54, 54, 71);
+    --modal: rgba(0,0,0,0.4);
+    --contentModal: #fefefe;
+    --bordeContenModal:#888;
+    --btnClose:#787777;
+    --btnCloseHover:#000;
+}
+/***************************************************/
+/*   cuerpo del documento      */
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--colorFondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorFondo);
+    background-image: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+                    linear-gradient(#eee .1em, transparent .9em);
+    background-size: 100% 3em;
+}
+body .btn{
+    background-color: var(--coloPrinci);
+    color: var(--colorFondo);
+    border: none;
+    border-radius: 0.7rem;
+    width: 20rem;
+    height: 2.2rem;
+    box-shadow: 0 0.1rem 0.6rem 0 var(--sombra);
+    margin-bottom: 2rem;
+}
+body .btn:hover{background-color: var(--btnClose);}
+body #btn{display: flex;justify-content: center;}
+
+/******************************************************************************************************************************/
+/*    titulo del formulario: Inicio se Sesión*/
+.head-container{
+    position: relative;
+    background-color: var(--coloPrinci);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    color: var(--colorFondo);
+    font-family:  monospace;
+    font-size: 2.5rem;
+    width: 100%;
+    text-align: center;
+}
+.head-container img{
+    position: absolute;
+    top: 0.5rem;
+    left: 0.9rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+/******************************************************************************************************************************/
+/*       formulario contenedor de: perfil correo contraseña ancla y boton            */
+.login{
+    height: 100%;
+    width: 40rem;
+    border: 0.09rem solid var(--coloPrinci);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0.1rem 0.6rem 0 var(--sombra);
+    font-size: 2rem;
+    background-color: var(--colorFondo);
+}
+
+/******************************************************************************************************************************/
+/*     color de texto del select   */
+.block-one select{
+    color: var(--bordeContenModal);
+}
+
+/******************************************************************************************************************************/
+/*  inputs: slect correo contraseña*/
+.block{
+    display:flex;
+    flex-direction: row;
+    margin-top: 2.5rem;
+    width: 31rem;
+    justify-content:space-between;
+}
+
+/******************************************************************************************************************************/
+/*  iconos ajustar tamaño de los iconos*/
+.ico{
+    height:1.8rem ;
+    width: 1.8rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+/******************************************************************************************************************************/
+/* este contenedor fue creado para organizar los iconos con los input que corresponden a cada uno*/
+.box{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/******************************************************************************************************************************/
+/* esto sirve para acomodar los label osea el texto: Perfil:, Correo; contraseña;*/
+.texto{
+    padding-top: 0.1rem;
+    width: 12rem ;
+}
+
+/******************************************************************************************************************************/
+/*                   iconos                     */
+.ico-perfil{
+    background-image: url(./usuario.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.ico-correo{
+    background-image: url(./Correo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.ico-pasword{
+    background-image: url(./bloquear.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+/*                   iconos                     */
+/******************************************************************************************************************************/
+/*        ancla olvidaste tu contraseña         */
+.block-four a{
+    text-decoration: none;
+    color: var(--ancla);
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+}
+.block-four a:active{
+    color: var(--coloPrinci);
+}
+.block-four a:hover{color: var(--coloPrinci);}
+/******************************************************************************************************************************/
+/* con esto le estoy dando sombra a todos los inputs y quitansoles el borde al seleccionarlos*/
+.input{
+    outline:none;
+    width: 16rem;
+    height: 2.5rem;
+    border: 0.1rem solid var(--ancla);
+    padding-left: 0.8rem;
+}
+.input:focus{
+    outline: 0.1rem solid var(--btnClose);
+    box-shadow:var(--sombra);
+}
+
+/******************************************************************************************************************************/
+/*Estilo para el modal (por defecto esta oculto)*/
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--modal);
+}
+
+
+/******************************************************************************************************************************/
+/*damos los estilos al contenido del modal*/
+.content-modal{
+    margin: 25vh auto 0 auto;
+    background-color: var(--contentModal);
+    border: 0.1rem solid var(--coloPrinci);
+    width: 43rem;
+    height: 20rem;
+    flex-direction: column;
+    border-radius: 1rem;
+}
+
+/******************************************************************************************************************************/
+/*estilo al boton de cerrar*/
+.close{
+    color: var(--colorFondo);
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+/*estilo al boton de cerrar*/
+/******************************************************************************************************************************/
+/*estilo al boton de cerrar al pasar el mouse por esima o al hacer hover*/
+.close:hover{
+    color:var(--btnCloseHover);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/******************************************************************************************************************************/
+/* header del modal*/
+.headerModal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--btnClose);
+    padding-right: 0.8rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+/*******************************************************************************************************************************/
+/* titulo del header del modal*/
+.headerModalTitle{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--contentModal);
+    font-size: 1.5rem;
+}
+
+/*******************************************************************************************************************************/
+.recoveryPasword{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+/*******************************************************************************************************************************/
+.mensaje{
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem;
+}
+/*******************************************************************************************************************************/
+.recoveryPasword form input[type="submit"]{
+    margin-top: 2.5rem;
+    
+}
+/*******************************************************************************************************************************/
+.enviarModal{
+    display: flex;
+    justify-content: center;
+}
+/*******************************************************************************************************************************/
+.modal .box{
+    font-size: 1.1rem;
+}
+/* Estilo al boton de cerrar al pasar el mouse por encima o al hacer hover */
+.close:hover {
+    color: var(--btnCloseHover);
+    text-decoration: none;
+    cursor: pointer;
+}

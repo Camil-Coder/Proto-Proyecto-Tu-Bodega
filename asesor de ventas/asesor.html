@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla-Principal-Encargado-de-Inventario</title>
+    <link rel="stylesheet" href="./css/celular.css" rel="screen and (min-width: 425px)">
+    <link rel="stylesheet" href="./css/tablet.css" rel="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="./css/laptop.css" rel="screen and (min-width: 1024px)">
+    <script src="ventanaprincipal.js" defer></script>    
+</head>
+<body>
+    <nav>    
+        <img src="./Logo-TuBodega.png" alt="Logo Tu bodega">
+        <!-- Formulario con botones para diferentes categorías -->
+        <form action="/procesar_formulario" method="post">
+    
+            <!-- Botón de clientes -->
+            
+            <a href="modalclientes.html">Clientes</a>
+    
+            <!-- Botón de productos -->
+            <a href="modalProductos.html">Productos</a>
+    
+            <!-- Botón de cotización -->
+            <a href="modalCotizacion.html">Cotizacion</a>
+    
+            <!-- Botón de documentos -->
+
+    
+            <!-- Botón de Sesion -->
+            <!-- Desplegable "Sesión" -->
+            <div class="dropdown">
+                <span class="dropdown-btn" onclick="mostrarModal('opcionesSesion')" id="sesionBtn">Sesion</span>
+                <div class="dropdown-content" id="opcionesSesion">
+                    <p>Usuario: <span id="nombreUsuario"></span></p>
+                    <p>Cargo: <span id="cargo"></span></p>
+                    <p>Fecha y Hora de Inicio de Sesión: <span id="fechaInicioSesion"></span></p>
+                    <button class="close-btn" onclick="cerrarSesion()">Cerrar Sesión <div id="icono-btn"></div></button>
+                </div>
+            </div>
+        </form>
+    </nav>
+    <div class="watermark">Tu Bodega.</div>
+
+</body>
+
+</html>

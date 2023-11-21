@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;400;500&display=swap');
+/*reseteo de estilos predeterminados por el navegador*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/****************************************************/
+/*Implementacion de REM para tomar medidas */
+html{
+    font-size: 62.5%;
+}
+/***************************************************/
+/*Creacion de variables ROOT */
+:root{
+    --color-background-body:#fff;
+    --color-barra-de-navegacion:rgba(107, 112, 112, 0.5);
+    --color-texto-botones:#dcfcfc;
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    --color-botones:rgb(134, 139, 134);
+    --color-botones-hover:#6d7575;
+    --color-text-botones:#faf6f6;
+    --border-botones: 1px solid #000;
+    --color-fondo-boton-deplegable-sesion:rgb(107, 112, 109);
+    --color-boton-cerrar-sesion:#1c1b1b;
+    --color-boton-cerrar-secion2:rgb(67, 69, 69);
+    --color-marca-de-agua:rgba(0, 0, 0, 0.3);
+}
+/***************************************************/
+/*      estilos del body               */
+body {
+    font-family:'Playpen Sans';
+    background-color: var(--color-background-body);
+    background-image: linear-gradient(90deg, transparent 78px, #abced4 79px, #abced4 81px, transparent 81px),
+                    linear-gradient(#eee .3em, transparent .8rem);
+    background-size: 100% 2.5em;
+}
+/* Estilos nav*/
+nav {
+    background-color: var(--color-barra-de-navegacion);
+    border-radius: 0.8rem;
+    box-shadow:var(--box-shadow);
+    margin: 2rem;
+    height: auto;
+    position: relative;
+    padding-top: 1rem;
+}
+/***************************************************/
+nav img{
+    position: absolute;
+    height: 3rem;
+    border-radius: 50%;
+    top: 19rem;
+    left: 6vw;
+}
+/***************************************************/
+/* estilos form*/
+form{
+    padding: 1rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+/***************************************************/
+/* Estilos para los botones */
+a,.dropdown-btn {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--color-text-botones);
+    background-color: var(--color-botones);
+    border:var(--border-botones);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    z-index: 2;
+    font-size: 1.4rem;
+    font-weight: bold;
+    width: 90%;
+}
+.dropdown-btn{
+    margin-left: 60%;
+    width: 40%;
+}
+.dropdown{
+    width: 90%;
+}
+/***************************************************/
+/* Cambio de color al pasar el ratón sobre el botón */
+a:hover,.modal-content button:hover,.dropdown-btn:hover {
+    background-color:var(--color-botones-hover);
+}
+.close-btn:hover{
+    background-color:var(--color-boton-cerrar-sesion) ;
+}
+/***************************************************/
+/* Nuevos estilos para el desplegable de sesión */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0%;
+    background-color:var(--color-fondo-boton-deplegable-sesion);
+    width: 100%;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.8rem;
+    z-index: 1002;
+}
+.dropdown-content p, .dropdown-content button {
+    padding: 1.2rem;
+    text-decoration: none;
+    color: var(--color-text-botones);
+    display: block;
+}
+/***************************************************/
+/*Boton Cerrar Sesion*/
+.dropdown-content button {
+    background-color: var(--color-boton-cerrar-secion2);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;  
+    text-align: left;
+    position: relative;  
+}
+
+#icono-btn{
+    position:absolute;
+    width: 6rem;
+    height: 6rem;
+    background-image: url(./ingresar.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    right:0vw ;
+    top: -1.01rem;
+}
+/***************************************************/
+/*funcion deplegable del boton sesion*/
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/***************************************************/
+/* Estilo para la marca de agua */
+.watermark {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5.6rem;
+    color: var(--color-marca-de-agua);
+    pointer-events: none;
+    z-index: 2;
+}
+/***************************************************/

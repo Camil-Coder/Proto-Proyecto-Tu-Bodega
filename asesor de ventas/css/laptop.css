@@ -1,0 +1,16 @@
+@media (min-width: 1024px){
+/***************************************************/
+/* Nuevos estilos para el desplegable de sesión */
+.dropdown-content {
+    right: 1.5vw;
+    width: 30%;
+}
+/***************************************************/
+/***************************************************/
+/* Estilo para la marca de agua */
+.watermark {
+    margin-top: 15rem;
+    font-size:8rem;
+}
+/***************************************************/
+}

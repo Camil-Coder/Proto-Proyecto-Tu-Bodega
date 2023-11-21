@@ -1,0 +1,46 @@
+@media (min-width: 768px){
+/* Estilos nav*/
+nav {
+    position: static;
+    padding-top: 0;
+}
+/***************************************************/
+/***************************************************/
+nav img{
+    position: absolute;
+    top: 4rem;
+    left: 3.7rem;
+}
+/***************************************************/
+/* estilos form*/
+form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 4rem;
+}
+/***************************************************/
+/* Estilos para los botones */
+a,.dropdown-btn {
+    width: 140px;
+}
+.dropdown-btn{
+    margin-left: 0%;
+}
+.dropdown{
+    width: 140px;
+}
+/***************************************************/
+/* Nuevos estilos para el desplegable de sesión */
+.dropdown-content {
+    right: 2%;
+    width: 30%;
+}
+/***************************************************/
+/* Estilo para la marca de agua */
+.watermark {
+    margin-top: 13rem;
+    font-size:7rem;
+}
+/***************************************************/
+}

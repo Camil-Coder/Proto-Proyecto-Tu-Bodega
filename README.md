@@ -31,6 +31,6 @@ Este repositorio es exclusivamente para el desarrollo y refinamiento del prototi
 
 <h2></h2>
 <p><h2>Contacto</h2>Si tienes preguntas o necesitas más información, no dudes en contactarnos:</p>
-<a href="https://github.com/castlefenix">castlefenix: Perfil de GitHub</a><br>
+<a href="https://github.com/Camil-Coder">Camil-Coder: Perfil de GitHub</a><br>
 <a href="https://github.com/Andy2691">Andy, Co-desarrollador del Proyecto</a>
 <h2></h2>

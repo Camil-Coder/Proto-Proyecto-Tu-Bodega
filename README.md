@@ -1,10 +1,10 @@
 <h1>🟢Tu Bodega💻</h1>
 
-- Bienvenido al repositorio oficial del prototipo de "Tu Bodega", un proyecto enfocado en desarrollar una solución eficiente y confiable para la contabilidad y gestión de inventarios.
+- Bienvenido al repositorio oficial del prototipo de "Tu Bodega", un proyecto enfocado en desarrollar una solución eficiente y confiable para la Administracion y gestión de supermercados.
 <hr>
 <h2>Sobre el Proyecto</h2>
 
-Este repositorio es exclusivamente para el desarrollo y refinamiento del prototipo del proyecto "**Tu Bodega**". Nuestro objetivo es crear un software que facilite la gestión contable y de inventarios, brindando una solución intuitiva y completa para empresas y negocios.
+Este repositorio es exclusivamente para el desarrollo y refinamiento del prototipo del proyecto "**Tu Bodega**". Nuestro objetivo es crear un software que facilite la gestión Administrativa y logistica, brindando una solución intuitiva y completa para empresas y negocios.
 
 <h2></h2>
 
